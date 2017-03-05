@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 let config = {
   slackWebhookURL: process.env.SLACK_WEBHOOK_URL,
   channelName: process.env.CHANNEL_NAME || '#doorbell',
