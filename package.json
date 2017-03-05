@@ -1,0 +1,19 @@
+{
+  "name": "dash-to-slack",
+  "version": "1.0.0",
+  "description": "Send Amazon Dash button presses to Slack",
+  "main": "dash-to-slack.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/maxbeizer/dash-to-slack"
+  },
+  "author": "Max Beizer <max.beizer@gmail.com> (http://maxbeizer.com)",
+  "license": "MIT",
+  "dependencies": {
+    "node-dash-button": "^0.6.1",
+    "slack-notify": "^0.1.6"
+  }
+}
