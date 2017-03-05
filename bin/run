@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+sudo node ./lib/dash-to-slack.js
