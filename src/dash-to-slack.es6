@@ -11,9 +11,11 @@ if(!config.buttonMACAddress) {
 }
 
 const client = SlackClient(config.slackWebhookURL)
-const button = DashButton(config.buttonMACAddress)
+const button = DashButton(config.buttonMACAddress, null, null, 'all')
 
-let sendMsgToSlack = () => {
+const sendMsgToSlack = (dashMACAdress) => {
+  if (config.buttonMACAddress !== dashMACAdress) return
+
   client.send({
     channel: config.channelName,
     text: config.messageToSend,
@@ -21,4 +23,4 @@ let sendMsgToSlack = () => {
   })
 }
 
-button.on('detected', () => sendMsgToSlack())
+button.on('detected', (dashMACAdress) => sendMsgToSlack(dashMACAdress))
